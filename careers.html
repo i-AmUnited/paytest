@@ -29,51 +29,50 @@
   </head>
 
   <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-dark navbar-expand-md navigation fixed-top rounded">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="./media/logo-payvantage.svg"
-            alt=""
-            width="35"
-            height="35"
-            class="d-inline-block align-text-center"
-          />
-          <span class="logo-company-name ms-2">Payvantage</span>
-        </a>
-
-        <button
-          class="navbar-toggler d-lg-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId"
-          aria-controls="collapsibleNavId"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-light" id="collapsibleNavId">
-          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-            <li class="nav-item pe-4">
-              <a class="nav-link text-light" href="#">About us</a>
-            </li>
-            <li class="nav-item pe-4">
-              <a class="nav-link text-light" href="#">Products</a>
-            </li>
-            <li class="nav-item pe-4">
-              <a class="nav-link text-light px-4 rounded" style="background-color: #ffffff10;" href="#">Partners</a>
-            </li>
-            <li class="nav-item pe-4">
-              <a class="nav-link text-light" href="#">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">Careers</a>
-            </li>
-          </ul>
+       <!-- navbar -->
+       <nav class="navbar navbar-dark navbar-expand-md navigation fixed-top rounded">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="./media/logo-payvantage.svg"
+              alt=""
+              width="35"
+              height="35"
+              class="d-inline-block align-text-center"
+            />
+            <span class="logo-company-name ms-2">Payvantage</span>
+          </a>
+  
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <li class="nav-item pe-4">
+                <a class="nav-link text-light" href="./about.html"
+                  >About us</a
+                >
+              </li>
+              <li class="nav-item pe-4">
+                <a class="nav-link text-light" href="./products.html">Products</a>
+              </li>
+              <li class="nav-item pe-4">
+                <a class="nav-link text-light" href="./team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="./careers.html">Careers</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
     </nav>
     <!-- navbar -->
 
@@ -86,7 +85,7 @@
             <p class="pb-3">
               The desire to reach our full potential, to advance in our careers and in life, is part of what it means to be human. 
             </p>
-            <a href="" class="learn-more">View open positions</a>
+            <a href="" class="learn-more" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View open positions</a>
           </div>
         </div>
       </div>
@@ -105,7 +104,7 @@
           <p class="heading">Progress to your full potential by exploring a culture of inclusion, collaboration, and development. </p>
         </div>
       </div>
-      <div class="row">
+      <div class="row g-4">
         <div class="col-sm-12 col-md-4 col-lg-3">
           <img src="./media/img-1.jpg" alt="" class="rounded border" style="width:100% ; height:300px; object-fit:cover">
         </div>
@@ -146,22 +145,22 @@
               <div class="col-sm-6 col-md-4 col-lg-4 text-center pb-3">
                 <img src="./media/shield-cross-fill.svg" alt="">
                 <p class="mb-1 mt-3 fw-bold">Pension Plan</p>
-                <span>Payvantage staff are entitled to health insurance to cover basic medical needs</span>
+                <span>Monthly pension payments are made into a retirement account for every staff</span>
               </div>
               <div class="col-sm-6 col-md-4 col-lg-4 text-center pb-3">
                 <img src="./media/cake-3-fill.svg" alt="">
                 <p class="mb-1 mt-3 fw-bold">Free Lunch</p>
-                <span>All team members receive a monthly budget to support their internet expenses</span>
+                <span>Lunch is provided on every working day</span>
               </div>
               <div class="col-sm-6 col-md-4 col-lg-4 text-center pb-3">
                 <img src="./media/service-fill.svg" alt="">
-                <p class="mb-1 mt-3 fw-bold">Paid Annual Leave</p>
-                <span>Payvantage staff are entitled to health insurance to cover basic medical needs</span>
+                <p class="mb-1 mt-3 fw-bold">Annual Leave</p>
+                <span>All team members get 20 days of annual leave.</span>
               </div>
             </div>
             <div class="row mt-5">
               <div class="col-12 text-center">
-                  <a href="" class="careers-btn">View open roles</a>
+                  <a href="" class="careers-btn"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">View open roles</a>
               </div>
             </div>
           </div>
@@ -209,16 +208,34 @@
               <div class="modal-body">
                 <div class="container">
                   <div class="row">
+                    <!-- there are no job openings -->
+                    <div class="col-12 text-center">
+                      There are currently no open roles at payvantage <br>
+                      Please keep checking
+                      😊
+                    </div>
+                    <!-- job openings -->
                     <div class="col-12">
-                      flafl.merk
+                      <div class="card p-3" hidden>
+                        <div class="row g-4 align-items-center">
+                          <div class="col-sm-12 col-md-12 col-lg-8">
+                            <p class="fw-bold">Senior Software Developer</p>
+                        <p>We’re looking for creative, thoughtful, self-starters to help identify the most ambitious businesses in Africa, and connect those businesses with the tools they need to grow.</p>
+                        <p>Full-time</p>
+                          </div>
+                          <div class="col-sm-12 col-md-12 col-lg-4 mb-4">
+                            <a href="" class="open-roles">Apply now</a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="modal-footer">
+              <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Understood</button>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -227,69 +244,87 @@
     </div>
     <!-- view open roles -->
 
-    <!-- Footer -->
-    <div class="footer footer-bg py-5 mx-2 mb-2 rounded">
-      <div class="container">
-        <div class="row mb-3 g-4">
-          <div class="col-sm-12 col-md-4 col-lg-5">
-            <span class="fw-bold fs-5">Payvantage Limited</span> <br />
-            <p class="mt-3">
-              We’re aiming to bring back the feeling of defined benefits, and
-              the financial peace of mind that goes with it. We envision a world
-              where you can be confident of reaching your goals.
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-4">
-            <p class="fw-bold">Contact Us</p>
-            <div>
-              <p>
-                Address: <br />
-                <span style="opacity: 50%"
-                  >No. 2, Dele Omodara Close. Off Titilayo Adedoyin Street,
-                  Omole Phase 1, Lagos.
-                </span>
+      <!-- Footer -->
+      <div class="footer footer-bg py-5 mx-2 mb-2 rounded border">
+        <!-- <div class="container">
+          <div class="row mb-3 g-4">
+            <div class="col-sm-12 col-md-4 col-lg-5">
+              <span class="fw-bold fs-5">Payvantage Limited</span> <br />
+              <p class="mt-3">
+                We’re aiming to bring back the feeling of defined benefits, and
+                the financial peace of mind that goes with it. We envision a world
+                where you can be confident of reaching your goals.
               </p>
             </div>
-            <div>
-              <p>
-                Email: <br />
-                <span style="opacity: 50%">info@payvantage.com.ng</span>
-              </p>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+              <p class="fw-bold">Contact Us</p>
+              <div>
+                <p>
+                  Address: <br />
+                  <span style="opacity: 50%"
+                    >No. 2, Dele Omodara Close. Off Titilayo Adedoyin Street,
+                    Omole Phase 1, Lagos.
+                  </span>
+                </p>
+              </div>
+              <div>
+                <p>
+                  Email: <br />
+                  <span style="opacity: 50%">info@payvantage.com.ng</span>
+                </p>
+              </div>
+              <div>
+                <p>
+                  Phone: <br />
+                  <span style="opacity: 50%">016310390</span>
+                </p>
+              </div>
             </div>
-            <div>
-              <p>
-                Phone: <br />
-                <span style="opacity: 50%">016310390</span>
-              </p>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+              <p class="fw-bold">Quick Links</p>
+              <div class="row g-4">
+                <div class="col-6">
+                  <a href="" style="color:#3e4095 ;">Partners</a>
+                </div>
+                <div class="col-6">
+                  <a href="" style="color:#3e4095 ;">Products</a>
+                </div>
+                <div class="col-6">
+                  <a href="" style="color:#3e4095 ;">Careers</a>
+                </div>
+                <div class="col-6">
+                  <a href="" style="color:#3e4095 ;">Team</a>
+                </div>
+                <div class="col-6">
+                  <a href="" style="color:#3e4095 ;">About us</a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-4 col-lg-3">
-            <p class="fw-bold">Quick Links</p>
-            <div class="row g-4">
-              <div class="col-6">
-                <a href="" style="color:#3e4095 ;">Partners</a>
-              </div>
-              <div class="col-6">
-                <a href="" style="color:#3e4095 ;">Products</a>
-              </div>
-              <div class="col-6">
-                <a href="" style="color:#3e4095 ;">Careers</a>
-              </div>
-              <div class="col-6">
-                <a href="" style="color:#3e4095 ;">Team</a>
-              </div>
-              <div class="col-6">
-                <a href="" style="color:#3e4095 ;">About us</a>
-              </div>
-            </div>
+          <div class="row border-top" style="opacity: 50%">
+            <div class="col-12 pt-3">© 2022 Payvantage Limited.</div>
           </div>
+        </div> -->
+        <div class="container">
+         <div class="row">
+           <div class="col-12 text-center mb-5">
+             <span class="fw-bold">"Always deliver more than expected."</span> 
+             <br>
+             Larry Page - Co-Founder, Google
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6">
+             © Payvantage Limited
+           </div>
+           
+           <div class="col-6 text-end">
+             <a href="https://www.linkedin.com/company/payvantage-limited/mycompany/" style="color: #3e4095; text-decoration: none;"><img src="./media/linkedin-box-fill.svg" alt=""></a>
+           </div>
+         </div>
         </div>
-        <div class="row border-top" style="opacity: 50%">
-          <div class="col-12 pt-3">© 2022 Payvantage Limited.</div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer -->
+       </div>
+      <!-- Footer -->
 
     <!-- Bootstrap JavaScript Libraries -->
     <script
