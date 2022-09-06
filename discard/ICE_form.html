@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p>ICE Detail Collection Form</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <form id="myForm" onsubmit="handleFormSubmit(this)">
+          <!-- VICTIM INFORMATION -->
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <div class="col-12">1. Victim Information</div>
+              </div>
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="victim_first_name">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="victim_first_name"
+                        name="victim_first_name"
+                        placeholder="First Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="victim_last_name">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="victim_last_name"
+                        name="victim_last_name"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="victim_address">Address</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="victim_address"
+                        name="victim_address"
+                        placeholder="Address"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="victim_phone">Phone</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="victim_phone"
+                        name="victim_phone"
+                        placeholder="Phone"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="victim_nationality">Nationality</label>
+                      <select
+                        class="form-control"
+                        name="victim_nationality"
+                        id="victim_nationality"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="victim_state">State</label>
+                      <select
+                        class="form-control"
+                        name="victim_state"
+                        id="victim_state"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="victim_LGA">LGA</label>
+                      <select
+                        class="form-control"
+                        name="victim_LGA"
+                        id="victim_LGA"
+                      >
+                        <!-- <option>select 1</option> -->
+                        <!--<option>Istanbul</option>
+                        <option>Jakarta</option> -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="victim_age">Age</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="victim_age"
+                        name="victim_age"
+                        placeholder="Age"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PERPETRATOR INFORMATION -->
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <div class="col-12">2. Perpetrator Information</div>
+              </div>
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="first_name">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="first_name"
+                        name="first_name"
+                        placeholder="First Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="last_name">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="last_name"
+                        name="last_name"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="address">Address</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="address"
+                        name="address"
+                        placeholder="Address"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="nationality">Nationality</label>
+                      <select
+                        class="form-control"
+                        name="nationality"
+                        id="nationality"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="state">State</label>
+                      <select class="form-control" name="state" id="state">
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="LGA">LGA</label>
+                      <select class="form-control" name="LGA" id="LGA">
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="age">Age</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="age"
+                        name="age"
+                        placeholder="Age"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="salary_range">Salary range</label>
+                      <select
+                        class="form-control"
+                        name="salary_range"
+                        id="salary_range"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="nature_of_marriage">Nature of marriage</label>
+                      <select
+                        class="form-control"
+                        name="nature_of_marriage"
+                        id="nature_of_marriage"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="education">Education</label>
+                      <select
+                        class="form-control"
+                        name="education"
+                        id="education"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="vulnurability">Vulnurability</label>
+                      <select
+                        class="form-control"
+                        name="vulnurability"
+                        id="vulnurability"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="live_alone"
+                        >Does the perpetrator live alone?</label
+                      >
+                      <select
+                        class="form-control"
+                        name="live_alone"
+                        id="live_alone"
+                      >
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE DETAILS -->
+          <div class="col-sm-12 mb-4">
+            <div class="card">
+              <div class="card-header">
+                <div class="col-12">3. Case details</div>
+              </div>
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="case_description">Case description</label>
+                      <textarea
+                        class="form-control"
+                        name="case_description"
+                        id="case_description"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="">Case type</label>
+                      <select
+                        class="form-control"
+                        name="case_type"
+                        id="case_type"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="violence_fatality">Violence fatality</label>
+                      <select
+                        class="form-control"
+                        name="violence_fatality"
+                        id="violence_fatality"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="violence_fatality_to"
+                        >Violence fatality referred to</label
+                      >
+                      <select
+                        class="form-control"
+                        name="violence_fatality_to"
+                        id="violence_fatality_to"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="another_org"
+                        >Has victim received service from another org.?</label
+                      >
+                      <select
+                        class="form-control"
+                        name="another_org"
+                        id="another_org"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="name_org">Name of organization?</label>
+                      <select
+                        class="form-control"
+                        name="name_org"
+                        id="name_org"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="service_rendered">Service rendered</label>
+                      <select
+                        class="form-control"
+                        name="service_rendered"
+                        id="service_rendered"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                      <label for="case_status">Case status</label>
+                      <select
+                        class="form-control"
+                        name="case_status"
+                        id="case_status"
+                      >
+                        <option>New Delhi</option>
+                        <option>Istanbul</option>
+                        <option>Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+            var select = document.getElementById("victim_LGA");
+      var options = [
+
+                "Port Harcourt",
+                "Obio-Akpor",
+                "Okrika",
+                "Ogu–Bolo",
+                "Eleme",
+                "Tai",
+                "Gokana",
+                "Khana",
+                "Oyigbo",
+                "Opobo–Nkoro",
+                "Andoni",
+                "Bonny",
+                "Degema",
+                "Asari-Toru",
+                "Akuku-Toru",
+                "Abua–Odual",
+                "Ahoada West",
+                "Ahoada East",
+                "Ogba–Egbema–Ndoni",
+                "Emohua",
+                "Ikwerre",
+                "Etche",
+                "Omuma",
+                "Aninri",
+                "Awgu",
+                "Enugu East",
+                "Enugu North",
+                "Enugu South",
+                "Ezeagu",
+                "Igbo Etiti",
+                "Igbo Eze North",
+                "Igbo Eze South",
+                "Isi Uzo",
+                "Nkanu East",
+                "Nkanu West",
+                "Nsukka",
+                "Oji River",
+                "Udenu",
+                "Udi",
+                "Uzo Uwani",
+                "Abaji",
+                "Bwari",
+                "Gwagwalada",
+                "Kuje",
+                "Kwali",
+                "Municipal Area Council",
+                "Akko",
+                "Balanga",
+                "Billiri",
+                "Dukku",
+                "Funakaye",
+                "Gombe",
+                "Kaltungo",
+                "Kwami",
+                "Nafada",
+                "Shongom",
+                "Yamaltu-Deba",
+                "Aboh Mbaise",
+                "Ahiazu Mbaise",
+                "Ehime Mbano",
+                "Ezinihitte",
+                "Ideato North",
+                "Ideato South",
+                "Ihitte-Uboma",
+                "Ikeduru",
+                "Isiala Mbano",
+                "Isu",
+                "Mbaitoli",
+                "Ngor Okpala",
+                "Njaba",
+                "Nkwerre",
+                "Nwangele",
+                "Obowo",
+                "Oguta",
+                "Ohaji-Egbema",
+                "Okigwe",
+                "Orlu",
+                "Orsu",
+                "Oru East",
+                "Oru West",
+                "Owerri Municipal",
+                "Owerri North",
+                "Owerri West",
+                "Unuimo",
+                "Auyo",
+                "Babura",
+                "Biriniwa",
+                "Birnin Kudu",
+                "Buji",
+                "Dutse",
+                "Gagarawa",
+                "Garki",
+                "Gumel",
+                "Guri",
+                "Gwaram",
+                "Gwiwa",
+                "Hadejia",
+                "Jahun",
+                "Kafin Hausa",
+                "Kazaure",
+                "Kiri Kasama",
+                "Kiyawa",
+                "Kaugama",
+                "Maigatari",
+                "Malam Madori",
+                "Miga",
+                "Ringim",
+                "Roni",
+                "Sule Tankarkar",
+                "Taura",
+                "Yankwashi",
+                "Birnin Gwari",
+                "Chikun",
+                "Giwa",
+                "Igabi",
+                "Ikara",
+                "Jaba",
+                "Jema a",
+                "Kachia",
+                "Kaduna North",
+                "Kaduna South",
+                "Kagarko",
+                "Kajuru",
+                "Kaura",
+                "Kauru",
+                "Kubau",
+                "Kudan",
+                "Lere",
+                "Makarfi",
+                "Sabon Gari",
+                "Sanga",
+                "Soba",
+                "Zangon Kataf",
+                "Zaria",
+                "Ajingi",
+                "Albasu",
+                "Bagwai",
+                "Bebeji",
+                "Bichi",
+                "Bunkure",
+                "Dala",
+                "Dambatta",
+                "Dawakin Kudu",
+                "Dawakin Tofa",
+                "Doguwa",
+                "Fagge",
+                "Gabasawa",
+                "Garko",
+                "Garun Mallam",
+                "Gaya",
+                "Gezawa",
+                "Gwale",
+                "Gwarzo",
+                "Kabo",
+                "Kano Municipal",
+                "Karaye",
+                "Kibiya",
+                "Kiru",
+                "Kumbotso",
+                "Kunchi",
+                "Kura",
+                "Madobi",
+                "Makoda",
+                "Minjibir",
+                "Nasarawa",
+                "Rano",
+                "Rimin Gado",
+                "Rogo",
+                "Shanono",
+                "Sumaila",
+                "Takai",
+                "Tarauni",
+                "Tofa",
+                "Tsanyawa",
+                "Tudun Wada",
+                "Ungogo",
+                "Warawa",
+                "Wudil",
+                "Bakori",
+                "Batagarawa",
+                "Batsari",
+                "Baure",
+                "Bindawa",
+                "Charanchi",
+                "Dandume",
+                "Danja",
+                "Dan Musa",
+                "Daura",
+                "Dutsi",
+                "Dutsin Ma",
+                "Faskari",
+                "Funtua",
+                "Ingawa",
+                "Jibia",
+                "Kafur",
+                "Kaita",
+                "Kankara",
+                "Kankia",
+                "Katsina",
+                "Kurfi",
+                "Kusada",
+                "Mai Adua",
+                "Malumfashi",
+                "Mani",
+                "Mashi",
+                "Matazu",
+                "Musawa",
+                "Rimi",
+                "Sabuwa",
+                "Safana",
+                "Sandamu",
+                "Zango",
+                "Aleiro",
+                "Arewa Dandi",
+                "Argungu",
+                "Augie",
+                "Bagudo",
+                "Birnin Kebbi",
+                "Bunza",
+                "Dandi",
+                "Fakai",
+                "Gwandu",
+                "Jega",
+                "Kalgo",
+                "Koko Besse",
+                "Maiyama",
+                "Ngaski",
+                "Sakaba",
+                "Shanga",
+                "Suru",
+                "Wasagu Danko",
+                "Yauri",
+                "Zuru",
+                "Adavi",
+                "Ajaokuta",
+                "Ankpa",
+                "Bassa",
+                "Dekina",
+                "Ibaji",
+                "Idah",
+                "Igalamela Odolu",
+                "Ijumu",
+                "Kabba Bunu",
+                "Kogi",
+                "Lokoja",
+                "Mopa Muro",
+                "Ofu",
+                "Ogori Magongo",
+                "Okehi",
+                "Okene",
+                "Olamaboro",
+                "Omala",
+                "Yagba East",
+                "Yagba West",
+                "Asa",
+                "Baruten",
+                "Edu",
+                "Ekiti",
+                "Ifelodun",
+                "Ilorin East",
+                "Ilorin South",
+                "Ilorin West",
+                "Irepodun",
+                "Isin",
+                "Kaiama",
+                "Moro",
+                "Offa",
+                "Oke Ero",
+                "Oyun",
+                "Pategi",
+                "Agege",
+                "Ajeromi-Ifelodun",
+                "Alimosho",
+                "Amuwo-Odofin",
+                "Apapa",
+                "Badagry",
+                "Epe",
+                "Eti Osa",
+                "Ibeju-Lekki",
+                "Ifako-Ijaiye",
+                "Ikeja",
+                "Ikorodu",
+                "Kosofe",
+                "Lagos Island",
+                "Lagos Mainland",
+                "Mushin",
+                "Ojo",
+                "Oshodi-Isolo",
+                "Shomolu",
+                "Surulere",
+                "Akwanga",
+                "Awe",
+                "Doma",
+                "Karu",
+                "Keana",
+                "Keffi",
+                "Kokona",
+                "Lafia",
+                "Nasarawa",
+                "Nasarawa Egon",
+                "Obi",
+                "Toto",
+                "Wamba",
+                "Agaie",
+                "Agwara",
+                "Bida",
+                "Borgu",
+                "Bosso",
+                "Chanchaga",
+                "Edati",
+                "Gbako",
+                "Gurara",
+                "Katcha",
+                "Kontagora",
+                "Lapai",
+                "Lavun",
+                "Magama",
+                "Mariga",
+                "Mashegu",
+                "Mokwa",
+                "Moya",
+                "Paikoro",
+                "Rafi",
+                "Rijau",
+                "Shiroro",
+                "Suleja",
+                "Tafa",
+                "Wushishi",
+                "Abeokuta North",
+                "Abeokuta South",
+                "Ado-Odo Ota",
+                "Egbado North",
+                "Egbado South",
+                "Ewekoro",
+                "Ifo",
+                "Ijebu East",
+                "Ijebu North",
+                "Ijebu North East",
+                "Ijebu Ode",
+                "Ikenne",
+                "Imeko Afon",
+                "Ipokia",
+                "Obafemi Owode",
+                "Odeda",
+                "Odogbolu",
+                "Ogun Waterside",
+                "Remo North",
+                "Shagamu",
+                "Akoko North-East",
+                "Akoko North-West",
+                "Akoko South-West",
+                "Akoko South-East",
+                "Akure North",
+                "Akure South",
+                "Ese Odo",
+                "Idanre",
+                "Ifedore",
+                "Ilaje",
+                "Ile Oluji-Okeigbo",
+                "Irele",
+                "Odigbo",
+                "Okitipupa",
+                "Ondo East",
+                "Ondo West",
+                "Ose",
+                "Owo",
+                "Atakunmosa East",
+                "Atakunmosa West",
+                "Aiyedaade",
+                "Aiyedire",
+                "Boluwaduro",
+                "Boripe",
+                "Ede North",
+                "Ede South",
+                "Ife Central",
+                "Ife East",
+                "Ife North",
+                "Ife South",
+                "Egbedore",
+                "Ejigbo",
+                "Ifedayo",
+                "Ifelodun",
+                "Ila",
+                "Ilesa East",
+                "Ilesa West",
+                "Irepodun",
+                "Irewole",
+                "Isokan",
+                "Iwo",
+                "Obokun",
+                "Odo Otin",
+                "Ola Oluwa",
+                "Olorunda",
+                "Oriade",
+                "Orolu",
+                "Osogbo",
+                "Afijio",
+                "Akinyele",
+                "Atiba",
+                "Atisbo",
+                "Egbeda",
+                "Ibadan North",
+                "Ibadan North-East",
+                "Ibadan North-West",
+                "Ibadan South-East",
+                "Ibadan South-West",
+                "Ibarapa Central",
+                "Ibarapa East",
+                "Ibarapa North",
+                "Ido",
+                "Irepo",
+                "Iseyin",
+                "Itesiwaju",
+                "Iwajowa",
+                "Kajola",
+                "Lagelu",
+                "Ogbomosho North",
+                "Ogbomosho South",
+                "Ogo Oluwa",
+                "Olorunsogo",
+                "Oluyole",
+                "Ona Ara",
+                "Orelope",
+                "Ori Ire",
+                "Oyo",
+                "Oyo East",
+                "Saki East",
+                "Saki West",
+                "Surulere",
+                "Bokkos",
+                "Barkin Ladi",
+                "Bassa",
+                "Jos East",
+                "Jos North",
+                "Jos South",
+                "Kanam",
+                "Kanke",
+                "Langtang South",
+                "Langtang North",
+                "Mangu",
+                "Mikang",
+                "Pankshin",
+                "Qua an Pan",
+                "Riyom",
+                "Shendam",
+                "Wase",
+                "Binji",
+                "Bodinga",
+                "Dange Shuni",
+                "Gada",
+                "Goronyo",
+                "Gudu",
+                "Gwadabawa",
+                "Illela",
+                "Isa",
+                "Kebbe",
+                "Kware",
+                "Rabah",
+                "Sabon Birni",
+                "Shagari",
+                "Silame",
+                "Sokoto North",
+                "Sokoto South",
+                "Tambuwal",
+                "Tangaza",
+                "Tureta",
+                "Wamako",
+                "Wurno",
+                "Yabo",
+                "Ardo Kola",
+                "Bali",
+                "Donga",
+                "Gashaka",
+                "Gassol",
+                "Ibi",
+                "Jalingo",
+                "Karim Lamido",
+                "Kumi",
+                "Lau",
+                "Sardauna",
+                "Takum",
+                "Ussa",
+                "Wukari",
+                "Yorro",
+                "Zing",
+                "Bade",
+                "Bursari",
+                "Damaturu",
+                "Fika",
+                "Fune",
+                "Geidam",
+                "Gujba",
+                "Gulani",
+                "Jakusko",
+                "Karasuwa",
+                "Machina",
+                "Nangere",
+                "Nguru",
+                "Potiskum",
+                "Tarmuwa",
+                "Yunusari",
+                "Yusufari",
+                "Anka",
+                "Bakura",
+                "Birnin Magaji Kiyaw",
+                "Bukkuyum",
+                "Bungudu",
+                "Gummi",
+                "Gusau",
+                "Kaura Namoda",
+                "Maradun",
+                "Maru",
+                "Shinkafi",
+                "Talata Mafara",
+                "Chafe",
+                "Zurmi",
+              
+
+      ];
+
+      // Optional: Clear all existing options first:
+      select.innerHTML = "";
+      // Populate list with options:
+      for(var i = 0; i < options.length; i++) {
+          var opt = options[i];
+          select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+      }
+    </script>
+  </body>
+</html>

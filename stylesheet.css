@@ -1,0 +1,334 @@
+body {
+  font-family: "Nunito";
+  background-color: #f8f8f8;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+.navigation {
+  /* background-color: #3e409580; */
+  background: linear-gradient(100deg, #3e409580 0%, #6f3e9580 100%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ffffff20;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  margin: 3px;
+  /* default value for webkit-backdrop-filter and backdrop-filter is 8px */
+}
+
+.footer-bg {
+  background-color: white;
+  color: #3e4095;
+  /* background: linear-gradient(100deg, #3e4095 0%, #6f3e95 100%); */
+}
+
+.header {
+  background: -webkit-linear-gradient(102.03deg, #3e4095cc, #6f3e95cc),
+    url("./media/header-1.jpg");
+  /* linear-gradient(102.03deg, #3e4095 0%, #6f3e95 100%) */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.header-about {
+  background: -webkit-linear-gradient(102.03deg, #3e4095, #6f3e9500),url("./media/header-2.jpg");
+  /* linear-gradient(102.03deg, #3e4095 0%, #6f3e95 100%) */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-career {
+  background: -webkit-linear-gradient(102.03deg, #3e4095, #6f3e9500),url("./media/img-2.jpg");
+  /* linear-gradient(102.03deg, #3e4095 0%, #6f3e95 100%) */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-company-name {
+  font-family: "nunito";
+  text-decoration: none;
+  /* font-weight: bold; */
+  font-size: 17px;
+}
+
+.header-content {
+  height: 100vh;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-more {
+  text-decoration: none;
+  color: #3e4095;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.open-roles {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 30px;
+  background-color: #3e4095;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.open-roles:hover {
+  text-decoration: none;
+  color: #3e4095;
+  padding: 15px 30px;
+  background-color: #3e409510;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.botin {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 30px;
+  background-color: #3e4095;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.learn-more:hover {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 30px;
+  background-color: #ffffff10;
+  border-radius: 5px;
+  border: 1px solid #ffffff20;
+}
+
+.botin:hover {
+  text-decoration: none;
+  color: #3e4095;
+  padding: 15px 30px;
+  background-color: #3e409510;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.card-ussd {
+  background-image: linear-gradient(to bottom, #00000050, #000000),
+    url(./media/ussd.png);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.service-name {
+  position: absolute;
+  bottom: 0;
+}
+
+.icon-bg {
+  background-color: #6f3e9510;
+  padding: 20px;
+  border: 1px solid #3e409510;
+  border-radius: 10px;
+}
+
+.service-link {
+  text-decoration: none;
+  color: #3e4095;
+}
+
+.purple-txt {
+  color: #3e4095;
+}
+
+
+.mosquepay-bg {
+  /* background: linear-gradient(to bottom,#00000020, #000000),
+    url("./media/mosquepay.jpg"); */
+  background: linear-gradient(to bottom, #3e409520, #3e409560),
+    url("./media/mosquepay.jpg");
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid #c5c6df;
+}
+
+.macrotel-bg {
+  background: linear-gradient(to bottom, #3e409520, #3e409560),
+    url("./media/Macrotel.jpg");
+  height: 350px;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.about-bg {
+  background: linear-gradient(to bottom, #3e409520, #3e409560),
+    url("./media/header-1.jpg");
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid #c5c6df;
+}
+
+.external-link {
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #ffffff30;
+}
+
+.heading {
+  font-size: 25px;
+}
+
+.words{
+  color: #3e4095;
+}
+
+.words:before {
+  content: "";
+  animation: animate infinite 8s;
+}
+
+@keyframes animate {
+  0%{
+    content: "Smarter";
+  }
+  33.33%{
+    content: "Better";
+  }
+  66.66%{
+    content: "Faster";
+  }
+  100%{
+    content: "Smarter";
+  }
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  margin-right: 5px;
+  border: 1px solid greenyellow;
+}
+
+div.scrollmenu span {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10px;
+  border: 1px solid violet;
+}
+
+.partner {
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background: #ffffff20;
+  border: 1px solid burlywood;
+}
+
+.scroll {
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.year {
+  border-radius: 5px;
+  padding: 20px;
+  color: #ffffff;
+  background: #ffffff20;
+  border: 1px solid #c4c4c430;
+}
+
+.light-blue-bg{
+  background-color: #308df8;
+}
+
+.products-btn{
+  text-decoration: none;
+  background-color: #3e4095;
+  color: #ffffff;
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+  border-radius: 5px;
+  border: 0px; 
+}
+
+.careers-btn{
+  text-decoration: none;
+  background-color: #f69870;
+  color: #ffffff;
+  padding: 15px 20px 15px 20px;
+  border-radius: 5px;
+  border: 0px; 
+}
+
+.careers-btn:hover{
+  background-color: #f6987030;
+  color: #f69870;
+}
+
+.career-quote-bg{
+  background: -webkit-linear-gradient(102.03deg, #3e4095, #6f3e9500),url("./media/header-2.jpg");
+  /* linear-gradient(102.03deg, #3e4095 0%, #6f3e95 100%) */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img{
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.profile-img-sm{
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.back-vid{
+  /* background-color:#2C3639; */
+  background-image: url(./media/pexels-mikhail-nilov-6892465.mp4);
+}
